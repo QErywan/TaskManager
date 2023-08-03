@@ -29,6 +29,7 @@ class DialogContent(MDBoxLayout):
         date = value.strftime("%d/%m/%Y")
         self.ids.date_text.text =str(date)
         
+        
 # List item action class
 class ListItemWithCheckBox(TwoLineAvatarIconListItem):
     def __init__(self, pk=None, **kwargs):
@@ -68,7 +69,7 @@ class MainApp(MDApp):
                 type="custom",
                 content_cls=DialogContent()
             )
-            self.task_list.open()
+        self.task_list.open()
     
     # Close the popup
     def close_task_dialog(self, *args):
